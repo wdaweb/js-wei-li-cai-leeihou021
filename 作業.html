@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        const rand = (min, max) => {
+            return Math.round(Math.random() * (max - min)) + min;
+        }
+        let g = []
+        for (i = 0; i < 6; i++) {
+
+            let a = rand(0, 38)
+            while (g.includes(a)) {
+                a = rand(0, 38)
+            }
+            g[i] = a
+
+        }
+
+        let b = rand(0, 8)
+
+
+        document.write(`A:${g}</br>`)
+
+        document.write(`B:${b}`)
+
+
+    </script>
+
+</body>
+
+</html>
